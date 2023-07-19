@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="css" rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Notepad</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="logo" id="logo" src="img/logo_header.png" alt="Logo"></a>
+        <h1>Notes</h1>
+        <input type="text" id="searchbox" placeholder="Search">
+            <div class="header-user-info">
+                <a href="#" class="logout-btn">Logout</a>
+            </div>
+        <div class="header-icons-container">
+            <a href="#"><img id="theme" class="header_icon" src="img/theme.png"></a>
+            <a href="#"><img id="settings" class="header_icon" src="img/settings.png"></a>
+            <a href="#"><img id="apps" class="header_icon" src="img/chocolate.png"></a>
+            <a href="#"><img id="profile" class="header_icon" src="img/user.png"></a>
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="form">
+            <div class="close-btn">&times;</div>
+            <div class="tab-header">
+                <div class="active">Sign Up</div>
+                <div>Sign In</div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-body active">
+                    <form id="signup-form">
+                        <div class="form-element">
+                            <input type="text" id="signup-email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-element">
+                            <input type="name" id="signup-name" name="name" placeholder="Your name">
+                        </div>
+                        <div class="form-element">
+                            <input type="password" id="signup-password" name="password" placeholder="Password">
+                        </div>
+                        <div class="form-element">
+                            <input type="password" id="repeat-password" name="repeat-password" placeholder="Repeat password">
+                        </div>
+                        <div class="form-element">
+                            <input type="submit" value="Sign Up">
+                        </div>
+                        <div class="form-element">
+                            <span>Already have an account? <a href="#">Sign In</a></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-body">
+                    <form id="login-form">
+                        <div class="form-element">
+                            <input type="text" id="login-email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-element">
+                            <input type="password" id="login-password" name="password" placeholder="Password">
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remember_me">
+                            <label for="remember_me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <input type="submit" value="Log In">
+                        </div>
+                        <div class="form-element">
+                            <span>Don't have an account? <a href="#">Sign Up</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="new__note" class="new__note">
+        <form id="add__note" action="">
+            <input type="text" id="title" name="title" placeholder="Title">
+            <textarea id="content" name="content" placeholder="Take a note..." autofocus></textarea>
+            <div class="background__select">
+                <select id="background-color">
+                    <option id="ffffff" selected="selected">-----</option>
+                    <option id="f9e79f">Yellow</option>
+                    <option id="7dcea0">Green</option>
+                    <option id="f1948a">Red</option>
+                    <option id="85c1e9">Blue</option>
+                    <option id="808b96">Black</option>
+                </select>
+                <span class="select__arrow"></span>
+            </div>
+            <div class="new__note__buttons">
+                <input type="submit" id="add" value="Add">
+                <input type="button" id="clear" value="Clear">
+            </div>
+        </form>
+    </section>
+    <section class="my__notes">
+        <h6>MY NOTES</h6>
+    </section>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+        const config = {
+            apiKey: "AIzaSyB1GU-XcV7Ic0L5gyHw_INvmisFq6ZuBBI",
+            authDomain: "copy-paste-e75d3.firebaseapp.com",
+            databaseURL: "https://copy-paste-e75d3-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "copy-paste-e75d3",
+            // storageBucket: "copy-paste-e75d3.appspot.com",
+            // messagingSenderId: "163134478202",
+            // appId: "1:163134478202:web:54bcea87a04c632141e8c3"
+        };
+        firebase.initializeApp(config);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="login.js"></script>
+</body>
+
+</html>

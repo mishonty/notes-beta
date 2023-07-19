@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #202020;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 2px 0px grey;
+    padding: 4px;
+    width: 100%;
+}
+
+header>h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20pt;
+}
+
+#logo, #settings {
+    vertical-align: middle;
+}
+
+div.wrapper {
+    padding: 100px;
+}
+
+div.my__notes {
+    padding-top: 45px;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    background-color: #FFB600;
+    font-size: 8pt;
+    padding: 6px;
+    color: black;
+}
+
+.note__container {
+    display: inline-block;
+    box-shadow: 0px 0px 0px 0.5px grey;
+    vertical-align: top;
+    width: 20%;
+    max-width: 200px;
+    font-size: 10pt;
+    border-radius: 6px;
+    margin: 4px;
+    padding: 16px;
+}
+
+.note__container__icons>img {
+    vertical-align: middle;
+}
+
+.note__container__body {
+    white-space: pre-line;
+}
+
+.edit__note__container>textarea {
+    width: 100%;
+    border: 0px;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    background-color: gainsboro;
+}
+
+.edit__note__container>.note__title {
+    padding-top: 20px;
+    height: 44px;
+}
+
+.note__title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.new__note {
+    margin: auto;
+    width: auto;
+    max-width: 600px;
+    box-shadow: 0px 0px 2px 0px grey;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.new__note>textarea {
+    vertical-align: middle;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    resize: none;
+    border: 1px;
+    outline: none;
+}
+
+#title {
+    font-weight: bold;
+    height: 20px;
+    border: 0px;
+    outline: none;
+}
+
+.my__notes>h6 {
+    padding-bottom: 1rem;
+}
+
+#searchbox {
+    width: 300px;
+    height: 36px;
+    background-color: #f0f0f0;
+    outline: none;
+    border: 0px;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.color__container {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 0px 2px 0px grey;
+    border-radius: 6px;
+    width: 500px;
+    height: 100px;
+}
+
+.colors__row {
+    height: 50px;
+    width: 500px;
+}
+
+.option {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+svg {
+    padding: 0;
+    margin: 0;
+}
